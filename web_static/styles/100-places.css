@@ -1,0 +1,117 @@
+/* Places Section */
+.places {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Place Article */
+.places article {
+    border: 1px solid #ff5a5f;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 20px;
+    width: 390px;
+}
+
+/* Name and Price Header */
+.places .name_and_price {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Price by Night Circle */
+.places .price_by_night {
+    align-items: center;
+    border: 4px solid #ff5a5f;
+    border-radius: 50%;
+    color: #ff5a5f;
+    display: flex;
+    font-size: 30px;
+    height: 60px;
+    justify-content: center;
+    min-width: 60px;
+}
+
+/* Information Section */
+.places .information {
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* Width of Stickers */
+.places .max_guest,
+.places .number_rooms,
+.places .number_bathrooms {
+    width: 100px;
+}
+
+/* User Section Padding */
+.places .user {
+    margin: 20px auto;
+}
+
+/* Margin for Amenities and Reviews Sections */
+.places .amenities,
+.places .reviews {
+    margin-top: 40px;
+}
+
+/* Amenities List Row Format */
+.places .amenities li {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Amenity Icon */
+.places .amenities i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 5%;
+}
+
+/* Align Amenity Text */
+.places .amenities p {
+    margin-top: 20px;
+}
+
+/* Header Styles */
+.places h1,
+.places h2,
+.places .amenities h2,
+.places .reviews h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Header Border */
+.places .amenities h2,
+.places .reviews h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Reviews Header */
+.places .reviews h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    position: relative;
+}
