@@ -1,38 +1,52 @@
 #!/usr/bin/python3
 """
-FileStorage Module: Defines the FileStorage class for serializing and deserializing instances to/from JSON files.
+    Define class FileStorage Module
 """
 import json
 import models
 
+
 class FileStorage:
     """
-    FileStorage class serializes instances to JSON file and deserializes to JSON file.
+        Serializes instances to JSON file and deserializes to JSON file.
     """
     __file_path = "file.json"
     __objects = {}
 
     def all(self):
-        """Returns the dictionary of objects"""
+        """
+            Return the dictionary
+        """
         return self.__objects
 
     def new(self, obj):
-        """Adds a new object to __objects"""
-        key = f"{obj.__class__.__name__}.{obj.id}"
-        FileStorage.__objects[key] = obj.to_dict()
+        """
+        Set new obj into __objects
+        """
+        key = str(obj.__class__.__name__) + "." + str(obj.id)
+        value_dict = obj
+        FileStorage.__objects[key] = value_dict
 
     def save(self):
-        """Serializes the objects into a JSON file"""
-        objects_dict = {key: val for key, val in self.__objects.items()}
-        with open(self.__file_path, mode='w', encoding="UTF8") as fd:
+        """
+        Serializes the objects into JSON file
+        """
+        objects_dict = {}
+        for key, val in FileStorage.__objects.items():
+            objects_dict[key] = val.to_dict()
+
+        with open(FileStorage.__file_path, mode='w', encoding="UTF8") as fd:
             json.dump(objects_dict, fd)
 
     def reload(self):
-        """Reloads the file and deserializes JSON into __objects"""
+        """
+        Reload the file and deserializes JSON into __objects
+        """
+
         try:
-            with open(self.__file_path, encoding="UTF8") as fd:
+            with open(FileStorage.__file_path, encoding="UTF8") as fd:
                 FileStorage.__objects = json.load(fd)
-            for key, val in self.__objects.items():
+            for key, val in FileStorage.__objects.items():
                 class_name = val["__class__"]
                 class_name = models.classes[class_name]
                 FileStorage.__objects[key] = class_name(**val)

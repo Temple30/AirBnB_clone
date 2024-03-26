@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""UniqueAmenity Module"""
-from unique_models.base_model import UniqueBaseModel
+"""Amenity Module"""
+from models.base_model import BaseModel
 
 
-class UniqueAmenity(UniqueBaseModel):
+class Amenity(BaseModel):
     """
-    Class for representing an amenity, inherits from UniqueBaseModel
+    The public class attribute should return an empty string
     """
     name = ""

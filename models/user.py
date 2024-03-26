@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""UniqueUser Module"""
-from unique_models.base_model import UniqueBaseModel
+"""Module creates User class"""
+from models.base_model import BaseModel
 
 
-class UniqueUser(UniqueBaseModel):
-    """
-    Class for representing a user, inherits from UniqueBaseModel
-    """
+class User(BaseModel):
+    """Class for managing users objects"""
+
     email = ""
     password = ""
     first_name = ""

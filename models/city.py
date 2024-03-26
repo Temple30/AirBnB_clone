@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""UniqueCity Module"""
-from unique_models.base_model import UniqueBaseModel
+"""City Module"""
+from models.base_model import BaseModel
 
 
-class UniqueCity(UniqueBaseModel):
+class City(BaseModel):
     """
-    Class for representing a city, inherits from UniqueBaseModel
     The public class attributes should be empty
     """
     state_id = ""

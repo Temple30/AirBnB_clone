@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""UniqueState Module"""
-from unique_models.base_model import UniqueBaseModel
+"""State Module"""
+from models.base_model import BaseModel
 
 
-class UniqueState(UniqueBaseModel):
+class State(BaseModel):
     """
-    Class for representing a state, inherits from UniqueBaseModel
-    All attributes should be empty
+    All attrbutes should be empty
     """
     name = ""

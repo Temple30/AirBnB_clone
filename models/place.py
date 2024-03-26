@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""UniquePlace Module"""
-from unique_models.base_model import UniqueBaseModel
+"""Place Module"""
+from models.base_model import BaseModel
 
 
-class UniquePlace(UniqueBaseModel):
+class Place(BaseModel):
     """
-    Class for representing a place, inherits from UniqueBaseModel
-    All public class attributes should be empty
+    All public class attribute should be empty
     """
     city_id = ""
     user_id = ""

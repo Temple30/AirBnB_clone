@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""UniqueReview Module"""
-from unique_models.base_model import UniqueBaseModel
+"""Review Module"""
+from models.base_model import BaseModel
 
 
-class UniqueReview(UniqueBaseModel):
+class Review(BaseModel):
     """
-    Class for representing a review, inherits from UniqueBaseModel
-    All attributes should be empty
+    All attrbutes should be empty
     """
     place_id = ""
     user_id = ""

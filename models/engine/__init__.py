@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 """
-Initialization of the package
+Initializes the package
 """
-from unique_models import *
+from models import *

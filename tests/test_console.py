@@ -2,28 +2,25 @@
 """Test for the console"""
 
 import unittest
+import console
 from console import HBNBCommand
 
 
-class TestConsole(unittest.TestCase):
-    """Class for testing console"""
+class test_console(unittest.TestCase):
+    """class test console"""
 
-    def setUp(self):
-        """Set up the console for testing"""
-        self.console = HBNBCommand()
-
-    def tearDown(self):
-        """Clean up after testing"""
-        del self.console
+    def create(self):
+        """create the intance"""
+        return HBNBCommand()
 
     def test_quit(self):
-        """Test for the quit method"""
-        self.assertTrue(self.console.onecmd("quit"))
+        """ test for the method quit
+        """
+        con = self.create()
+        self.assertTrue(con.onecmd("quit"))
 
     def test_EOF(self):
-        """Test for the method EOF"""
-        # Simulating EOF by passing an empty string
-        self.assertTrue(self.console.onecmd(""))
-
-if __name__ == '__main__':
-    unittest.main()
+        """test for the method EQF
+        """
+        con = self.create()
+        self.assertTrue(con.onecmd("EOF"))
