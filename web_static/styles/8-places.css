@@ -6,21 +6,15 @@
     font-size: 30px;
 }
 
-.place-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.article {
-    width: calc(33.33% - 20px);
+.places article {
+    width: 390px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
     border: 1px solid #FF5A5F;
     border-radius: 4px;
 }
 
-.article h2 {
+.places article h2 {
     font-size: 30px;
     text-align: center;
 }
@@ -60,40 +54,4 @@
 
 .description {
     margin-top: 10px;
-}
-
-.amenities,
-.reviews {
-    margin-top: 40px;
-}
-
-.amenities h2,
-.reviews h2 {
-    font-size: 16px;
-    border-bottom: 1px solid #DDDDDD;
-}
-
-.amenities ul,
-.reviews ul {
-    list-style: none;
-    padding: 0;
-}
-
-.amenities ul li,
-.reviews ul li {
-    margin-top: 10px;
-}
-
-.amenities .icon,
-.reviews .icon {
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-.reviews h3 {
-    font-size: 14px;
-}
-
-.reviews p {
-    font-size: 12px;
 }
